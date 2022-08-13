@@ -2,3 +2,6 @@
 <p>{{ahmed1.content}}</p>
 <p>{{ahmed1.salary}}</p>
 <img src="ahmed1.imag.url" alt="">
+
+<a href="{% url 'edit_course' ahmed1.id %}">edit course</a>
+<a href="{% url 'delete_course' ahmed1.id %}">delete course</a>
