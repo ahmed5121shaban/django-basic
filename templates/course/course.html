@@ -1,0 +1,5 @@
+<h1>courses</h1>
+
+{% for course in ahmed %}
+    <h3><a href="{% url 'single_course' course.id %}">{{course}}</a></h3>
+{% endfor %}
