@@ -22,7 +22,9 @@ def new_course(request):
     if request.method == 'POST':
         form=CourseForm(request.POST)
         if form.is_valid():
-            form.save()
+            myform=form.save(commit=False)
+            myform.outher = request.user
+            myform.save()
     else:
         form=CourseForm()
     return render(request,'course/new.html',{'form':form})
